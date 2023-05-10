@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
-import rows from "../../data/data.json";
+import rows from "../../../public/data/data.json";
 
 const Table =() => {
   

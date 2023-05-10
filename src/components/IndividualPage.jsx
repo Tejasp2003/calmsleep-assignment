@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 
 import { LinearProgress } from "@mui/material";
 import LineChart from "./LineChart";
-import rows from "../data/data.json";
+import rows from "../../public/data/data.json";
 
 const Single = () => {
   
