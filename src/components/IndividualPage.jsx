@@ -1,26 +1,16 @@
 import { useParams } from "react-router-dom";
-import axios from "axios";
+
 import { LinearProgress } from "@mui/material";
 import LineChart from "./LineChart";
-import { useEffect, useState } from "react";
+import rows from "../data/data.json";
 
 const Single = () => {
-  const [rows, setRows] = useState([]);
+  
 
-  useEffect(() => {
-    const fetch = async () => {
-      const data = await axios
-        .get("https://calmsleep-data.onrender.com/data")
-        .then((res) => res.data)
-        .catch((err) => console.log(err));
-      setRows(data);
-    };
-    fetch();
-  }, []);
-  console.log("rows:" ,rows);
+ 
 
   const { userId } = useParams();
-  if (rows.length === 0) return <div>Loading...</div>;
+
   
   const data = rows.find((row) => row.id === parseInt(userId));
   
