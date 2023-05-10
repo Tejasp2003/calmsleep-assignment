@@ -1,8 +1,23 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
-import rows from "../../data.json";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const Table = () => {
+const Table =() => {
+
+ const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    const fetch = async () => {
+      const data = await axios
+        .get("https://calmsleep-data.onrender.com/data")
+        .then((res) => res.data)
+        .catch((err) => console.log(err));
+      setRows(data);
+    };
+    fetch();
+  }, []);
+  console.log(rows);
 
   return (
     <div className="flex flex-col items-center justify-center sm:w-[90%] w-[60vw] m-auto bg-white/50 border rounded-3xl relative overflow-hidden   h-full">
