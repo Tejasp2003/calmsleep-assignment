@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import rows from "../data.json";
+import rows from "../data";
 import { LinearProgress } from "@mui/material";
 import LineChart from "./LineChart";
 
