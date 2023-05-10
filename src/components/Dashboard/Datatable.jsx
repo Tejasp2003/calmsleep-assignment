@@ -1,15 +1,15 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
-import rows from "../../data";
+import rows from "../../data.json";
 
 const Table = () => {
-  let uniquePlays=0;
+
   return (
     <div className="flex flex-col items-center justify-center sm:w-[90%] w-[60vw] m-auto bg-white/50 border rounded-3xl relative overflow-hidden   h-full">
       <table className=" w-full  ">
         <thead>
           <tr className="p-4 border-b-slate-400">
-            <th className=" hidden sm:visible  p-4">Id</th>
+            <th className="  p-4">Id</th>
             <th className="  p-4">Title</th>
             <th className="  p-4">Image</th>
             <th className="  p-4">Total Plays</th>
@@ -32,7 +32,7 @@ const Table = () => {
               }}
               
             >
-              <td className=" hidden sm:visible p-1 sm:p-4 text-center">{row.id}</td>
+              <td className="  p-1 sm:p-4 text-center">{row.id}</td>
               <td className=" p-1 sm:p-4 text-center">{row.title}</td>
               <td className=" p-1 sm:p-4  flex justify-center">
                 <div>

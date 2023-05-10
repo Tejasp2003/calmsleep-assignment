@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import rows from "../data";
+import rows from "../data.json";
 import { LinearProgress } from "@mui/material";
 import LineChart from "./LineChart";
 
@@ -24,7 +24,7 @@ const Single = () => {
             >
               <h3
                 className="
-                text-xl md:text-xl text-center text-black font-bold text-blue-900
+                text-xl md:text-xl text-center  font-bold text-blue-900
                 "
               >
                 Song Name:
