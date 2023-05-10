@@ -1,13 +1,9 @@
 import { useParams } from "react-router-dom";
-
 import { LinearProgress } from "@mui/material";
 import LineChart from "./LineChart";
 import rows from "../../public/data.json";
 
 const Single = () => {
-  
-
- 
 
   const { userId } = useParams();
 
@@ -21,8 +17,7 @@ const Single = () => {
         <div className="flex flex-row items-center  justify-between  ml-10  gap-4 sm:gap-6 md:gap-8">
           <div
             className="
-            flex flex-col items-center justify-center  h-24 w-40 md:h-32 md:w-60 rounded-xl bg-blue-100/50 border-[3px] border-black text-center 
-        "
+            flex flex-col items-center justify-center  h-24 w-40 md:h-32 md:w-60 rounded-xl bg-blue-100/50 border-[3px] border-black text-center "
           >
             <h2
               className="
