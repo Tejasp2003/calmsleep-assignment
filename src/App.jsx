@@ -8,8 +8,9 @@ const App = () => {
       <Routes>
         <Route path="/">
           <Route index element={<Dashboard />} />
-          <Route path=":userId" element={<Single />} />
+          {/* <Route path=":userId" element={<Single />} /> */}
         </Route>
+        <Route path=":userId" element={<Single />} />
       </Routes>
     </BrowserRouter>
   );

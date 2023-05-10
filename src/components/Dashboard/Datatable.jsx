@@ -19,6 +19,7 @@ const Table = () => {
         </thead>
         <tbody>
           {rows.map((row) => (
+            
             <tr
               className="p-4  cursor-pointer
               transform
@@ -29,6 +30,7 @@ const Table = () => {
               onClick={() => {
                 window.location.href = `/${row.id}`;
               }}
+              
             >
               <td className=" hidden sm:visible p-1 sm:p-4 text-center">{row.id}</td>
               <td className=" p-1 sm:p-4 text-center">{row.title}</td>
@@ -60,7 +62,10 @@ const Table = () => {
               </td>
               <td className=" p-1 sm:p-4 text-center">{row.completionRate*100}%</td>
             </tr>
+            
           ))}
+
+          
         </tbody>
       </table>
     </div>
